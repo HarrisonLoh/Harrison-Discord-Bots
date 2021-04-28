@@ -48,7 +48,7 @@ async def on_raw_reaction_remove(payload):
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
-        member = guild.get_member(payload.user_id)
+        member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
 
         if payload.emoji.name == "🇱":
             role = discord.utils.get(guild.roles, name="league")
