@@ -70,7 +70,7 @@ async def on_raw_reaction_remove(payload):
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
-            member = payload.member
+            member = payload.user_id
             print(member)
             print("Done")
             if member is not None:
