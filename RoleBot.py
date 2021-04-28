@@ -48,6 +48,7 @@ async def on_raw_reaction_remove(payload):
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
+        member = guild.get_member(payload.user_id)
 
         if payload.emoji.name == "🇱":
             role = discord.utils.get(guild.roles, name="league")
@@ -70,11 +71,11 @@ async def on_raw_reaction_remove(payload):
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
-            member = payload.user_id
+            # member = payload.user_id
             print(member)
             print("Done")
             if member is not None:
-                await member.remove_role(role)
+                await member.remove_roles(role)
                 print("Await Done")
 
 client.run(os.environ.get('DISCORD_TOKEN'))
