@@ -12,27 +12,24 @@ async def on_raw_reaction_add(payload):
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
 
-        print(type(payload.emoji.name))
-        print(payload.emoji.name)
-        print(type("v"))
-        if payload.emoji.name == "🇱":
-            role = discord.utils.get(guild.roles, name="league")
-        elif payload.emoji.name == "🇻":
-            role = discord.utils.get(guild.roles, name="valorant")
-        elif payload.emoji.name == "🇨":
-            role = discord.utils.get(guild.roles, name="csgo")
-        elif payload.emoji.name == "🇦":
-            role = discord.utils.get(guild.roles, name="apex")
-        elif payload.emoji.name == "🇺":
+        if payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
-        elif payload.emoji.name == "🇲":
-            role = discord.utils.get(guild.roles, name="minecraft")
-        elif payload.emoji.name == "🇹":
-            role = discord.utils.get(guild.roles, name="terraria")
-        elif payload.emoji.name == "🇫":
-            role = discord.utils.get(guild.roles, name="tft")
-        elif payload.emoji.name == "🇩":
+        elif payload.emoji.name == "2️⃣":
+            role = discord.utils.get(guild.roles, name="apex")
+        elif payload.emoji.name == "3️⃣":
+            role = discord.utils.get(guild.roles, name="csgo")
+        elif payload.emoji.name == "4️⃣":
             role = discord.utils.get(guild.roles, name="deep rock")
+        elif payload.emoji.name == "5️⃣":
+            role = discord.utils.get(guild.roles, name="league")
+        elif payload.emoji.name == "6️⃣":
+            role = discord.utils.get(guild.roles, name="minecraft")
+        elif payload.emoji.name == "7️⃣":
+            role = discord.utils.get(guild.roles, name="terraria")
+        elif payload.emoji.name == "8️⃣":
+            role = discord.utils.get(guild.roles, name="tft")
+        elif payload.emoji.name == "9️⃣":
+            role = discord.utils.get(guild.roles, name="valorant")
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
@@ -52,24 +49,24 @@ async def on_raw_reaction_remove(payload):
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
         member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
 
-        if payload.emoji.name == "🇱":
-            role = discord.utils.get(guild.roles, name="league")
-        elif payload.emoji.name == "🇻":
-            role = discord.utils.get(guild.roles, name="valorant")
-        elif payload.emoji.name == "🇨":
-            role = discord.utils.get(guild.roles, name="csgo")
-        elif payload.emoji.name == "🇦":
-            role = discord.utils.get(guild.roles, name="apex")
-        elif payload.emoji.name == "🇺":
+        if payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
-        elif payload.emoji.name == "🇲":
-            role = discord.utils.get(guild.roles, name="minecraft")
-        elif payload.emoji.name == "🇹":
-            role = discord.utils.get(guild.roles, name="terraria")
-        elif payload.emoji.name == "🇫":
-            role = discord.utils.get(guild.roles, name="tft")
-        elif payload.emoji.name == "🇩":
+        elif payload.emoji.name == "2️⃣":
+            role = discord.utils.get(guild.roles, name="apex")
+        elif payload.emoji.name == "3️⃣":
+            role = discord.utils.get(guild.roles, name="csgo")
+        elif payload.emoji.name == "4️⃣":
             role = discord.utils.get(guild.roles, name="deep rock")
+        elif payload.emoji.name == "5️⃣":
+            role = discord.utils.get(guild.roles, name="league")
+        elif payload.emoji.name == "6️⃣":
+            role = discord.utils.get(guild.roles, name="minecraft")
+        elif payload.emoji.name == "7️⃣":
+            role = discord.utils.get(guild.roles, name="terraria")
+        elif payload.emoji.name == "8️⃣":
+            role = discord.utils.get(guild.roles, name="tft")
+        elif payload.emoji.name == "9️⃣":
+            role = discord.utils.get(guild.roles, name="valorant")
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
