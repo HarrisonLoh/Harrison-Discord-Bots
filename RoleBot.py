@@ -13,7 +13,7 @@ async def on_raw_reaction_add(payload):
         print(type(payload.emoji.name))
         print(payload.emoji.name)
         print(type("v"))
-        if payload.emoji.name == "l":
+        if payload.emoji.name == "🇱":
             role = discord.utils.get(guild.roles, name="league")
         # elif payload.emoji.name == "v":
         #     print("in v")
