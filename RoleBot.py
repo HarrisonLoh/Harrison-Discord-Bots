@@ -10,10 +10,11 @@ async def on_raw_reaction_add(payload):
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
 
-        print(payload.emoji.name)
+        print(type(payload.emoji.name))
         if payload.emoji.name == "l":
             role = discord.utils.get(guild.roles, name="league")
         elif payload.emoji.name == "v":
+            print("in v")
             role = discord.utils.get(guild.roles, name="valorant")
         elif payload.emoji.name == "c":
             role = discord.utils.get(guild.roles, name="csgo")
