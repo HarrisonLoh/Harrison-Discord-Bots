@@ -4,6 +4,7 @@ import os
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
+#When emoting a certain emote, gain that role.
 @client.event
 async def on_raw_reaction_add(payload):
     message_id = payload.message_id
