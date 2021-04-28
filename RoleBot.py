@@ -90,7 +90,7 @@ async def on_raw_reaction_remove(payload):
         print(str(Post_Message))
 
         # if the name of the reaction emoji is "League" theen assign the "League bois discord role
-        if payload.emoji.name == "a":
+        if payload.emoji.name == "🇦":
             role = discord.utils.get(guild.roles, name="apex")
 
         else:
