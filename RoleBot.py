@@ -31,9 +31,8 @@ async def on_raw_reaction_add(payload):
         else:
             role = discord.utils.get(guild.roles, name="league")
         if role is not None:
-            member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
+            member = payload.member
             print("Done")
-            print(member)
             if member is not None:
                 await member.add_roles(role)
                 print("Await Done")
@@ -67,7 +66,7 @@ async def on_raw_reaction_remove(payload):
         else:
             role = discord.utils.get(guild.roles, name="league")
         if role is not None:
-            member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
+            member = payload.member
             print("Done")
             if member is not None:
                 await member.remove_roles(role)
