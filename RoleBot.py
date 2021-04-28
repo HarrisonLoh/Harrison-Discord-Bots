@@ -34,11 +34,8 @@ async def on_raw_reaction_add(payload):
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
             member = payload.member
-            print("Done")
-            print(member)
             if member is not None:
                 await member.add_roles(role)
-                print("Await Done")
 
 #Why is this not working?
 @client.event
@@ -70,11 +67,7 @@ async def on_raw_reaction_remove(payload):
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
-            # member = payload.user_id
-            print(member)
-            print("Done")
             if member is not None:
                 await member.remove_roles(role)
-                print("Await Done")
 
 client.run(os.environ.get('DISCORD_TOKEN'))
