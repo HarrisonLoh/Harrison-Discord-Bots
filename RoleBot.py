@@ -8,7 +8,7 @@ async def on_raw_reaction_add(payload):
     message_id = payload.message_id
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
-        guild = discord.utils.find(lambda g: g.id == guild.id, client.guilds)
+        guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
 
         if payload.emoji.name == "regional_indicator_l":
             role = discord.utils.get(guild.roles, name="league")
@@ -39,7 +39,7 @@ async def on_raw_reaction_remove(payload):
     message_id = payload.message_id
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
-        guild = discord.utils.find(lambda g: g.id == guild.id, client.guilds)
+        guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
 
         if payload.emoji.name == "regional_indicator_l":
             role = discord.utils.get(guild.roles, name="league")
