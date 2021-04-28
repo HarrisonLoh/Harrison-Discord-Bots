@@ -65,4 +65,4 @@ async def on_raw_reaction_remove(payload):
             if member is not None:
                 await member.remove_roles(role)
 
-client.run(os.environ('DISCORD_TOKEN'))
+client.run(os.environ.get('DISCORD_TOKEN'))
