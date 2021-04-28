@@ -29,7 +29,7 @@ async def on_raw_reaction_add(payload):
         elif payload.emoji.name == "regional_indicator_d":
             role = discord.utils.get(guild.roles, name="deep rock")
         else:
-            role = discord.utils.get(guild.roles, name="league")
+            role = discord.utils.get(guild.roles, name="")
         if role is not None:
             member = payload.member
             print("Done")
@@ -45,7 +45,7 @@ async def on_raw_reaction_remove(payload):
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
-
+        print(payload.emoji.name)
         if payload.emoji.name == "regional_indicator_l":
             role = discord.utils.get(guild.roles, name="league")
         elif payload.emoji.name == "regional_indicator_v":
@@ -65,7 +65,7 @@ async def on_raw_reaction_remove(payload):
         elif payload.emoji.name == "regional_indicator_d":
             role = discord.utils.get(guild.roles, name="deep rock")
         else:
-            role = discord.utils.get(guild.roles, name="league")
+            role = discord.utils.get(guild.roles, name="")
         if role is not None:
             member = payload.member
             print("Done")
