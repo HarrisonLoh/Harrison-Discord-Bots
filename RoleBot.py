@@ -10,23 +10,23 @@ async def on_raw_reaction_add(payload):
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
 
-        if payload.emoji.name == "regional_indicator_l":
+        if payload.emoji.name == "l":
             role = discord.utils.get(guild.roles, name="league")
-        elif payload.emoji.name == "regional_indicator_v":
+        elif payload.emoji.name == "v":
             role = discord.utils.get(guild.roles, name="valorant")
-        elif payload.emoji.name == "regional_indicator_c":
+        elif payload.emoji.name == "c":
             role = discord.utils.get(guild.roles, name="csgo")
-        elif payload.emoji.name == "regional_indicator_a":
+        elif payload.emoji.name == "a":
             role = discord.utils.get(guild.roles, name="apex")
-        elif payload.emoji.name == "regional_indicator_u":
+        elif payload.emoji.name == "u":
             role = discord.utils.get(guild.roles, name="among us")
-        elif payload.emoji.name == "regional_indicator_m":
+        elif payload.emoji.name == "m":
             role = discord.utils.get(guild.roles, name="minecraft")
-        elif payload.emoji.name == "regional_indicator_t":
+        elif payload.emoji.name == "t":
             role = discord.utils.get(guild.roles, name="terraria")
-        elif payload.emoji.name == "regional_indicator_f":
+        elif payload.emoji.name == "f":
             role = discord.utils.get(guild.roles, name="tft")
-        elif payload.emoji.name == "regional_indicator_d":
+        elif payload.emoji.name == "d":
             role = discord.utils.get(guild.roles, name="deep rock")
         else:
             role = discord.utils.get(guild.roles, name="")
@@ -45,24 +45,24 @@ async def on_raw_reaction_remove(payload):
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
-        print(payload.emoji.name)
-        if payload.emoji.name == "regional_indicator_l":
+
+        if payload.emoji.name == "l":
             role = discord.utils.get(guild.roles, name="league")
-        elif payload.emoji.name == "regional_indicator_v":
+        elif payload.emoji.name == "v":
             role = discord.utils.get(guild.roles, name="valorant")
-        elif payload.emoji.name == "regional_indicator_c":
+        elif payload.emoji.name == "c":
             role = discord.utils.get(guild.roles, name="csgo")
-        elif payload.emoji.name == "regional_indicator_a":
+        elif payload.emoji.name == "a":
             role = discord.utils.get(guild.roles, name="apex")
-        elif payload.emoji.name == "regional_indicator_u":
+        elif payload.emoji.name == "u":
             role = discord.utils.get(guild.roles, name="among us")
-        elif payload.emoji.name == "regional_indicator_m":
+        elif payload.emoji.name == "m":
             role = discord.utils.get(guild.roles, name="minecraft")
-        elif payload.emoji.name == "regional_indicator_t":
+        elif payload.emoji.name == "t":
             role = discord.utils.get(guild.roles, name="terraria")
-        elif payload.emoji.name == "regional_indicator_f":
+        elif payload.emoji.name == "f":
             role = discord.utils.get(guild.roles, name="tft")
-        elif payload.emoji.name == "regional_indicator_d":
+        elif payload.emoji.name == "d":
             role = discord.utils.get(guild.roles, name="deep rock")
         else:
             role = discord.utils.get(guild.roles, name="")
