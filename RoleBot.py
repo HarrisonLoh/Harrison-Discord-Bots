@@ -74,7 +74,7 @@ async def on_raw_reaction_remove(payload):
             print(member)
             print("Done")
             if member is not None:
-                await member.remove_roles(role)
+                await member.remove_role(role)
                 print("Await Done")
 
 client.run(os.environ.get('DISCORD_TOKEN'))
