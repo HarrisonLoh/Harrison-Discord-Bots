@@ -4,6 +4,10 @@ import os
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
+@client.event
+async def on_ready():
+    await client.change_presence(status=discord.Status.invisible,activity = discord.Game('Game Selector Bot.'))
+
 #When emoting a certain emote, gain that role.
 @client.event
 async def on_raw_reaction_add(payload):
