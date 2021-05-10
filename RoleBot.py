@@ -38,7 +38,7 @@ async def on_raw_reaction_add(payload):
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
-            print(playload.emoji.name)
+            print(payload.emoji.name)
             member = payload.member
             if member is not None:
                 await member.add_roles(role)
