@@ -17,6 +17,7 @@ async def on_raw_reaction_add(payload):
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
         if payload.emoji.name == "0️⃣":
             role = discord.utils.get(guild.roles, name="destiny")
+            print("dest")
         #print(payload.emoji.name)
         elif payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
