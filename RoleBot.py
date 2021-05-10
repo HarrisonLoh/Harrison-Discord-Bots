@@ -15,10 +15,10 @@ async def on_raw_reaction_add(payload):
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
-        #if payload.emoji.name == ":zero:":
-            #role = discord.utils.get(guild.roles, name="destiny")
-        print(payload.emoji.name)
-        if payload.emoji.name == "1️⃣":
+        if payload.emoji.name == "0️⃣":
+            role = discord.utils.get(guild.roles, name="destiny")
+        #print(payload.emoji.name)
+        elif payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
         elif payload.emoji.name == "2️⃣":
             role = discord.utils.get(guild.roles, name="apex")
@@ -39,7 +39,7 @@ async def on_raw_reaction_add(payload):
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
-            print(payload.emoji.name)
+            #print(payload.emoji.name)
             member = payload.member
             if member is not None:
                 await member.add_roles(role)
@@ -53,7 +53,9 @@ async def on_raw_reaction_remove(payload):
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
         member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
 
-        if payload.emoji.name == "1️⃣":
+        if payload.emoji.name == "0️⃣":
+            role = discord.utils.get(guild.roles, name="destiny")
+        elif payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
         elif payload.emoji.name == "2️⃣":
             role = discord.utils.get(guild.roles, name="apex")
