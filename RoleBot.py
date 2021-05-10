@@ -15,7 +15,8 @@ async def on_raw_reaction_add(payload):
     if message_id == 836987061901721640:
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
-
+        #if payload.emoji.name == ":zero:":
+            #role = discord.utils.get(guild.roles, name="destiny")
         if payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
         elif payload.emoji.name == "2️⃣":
@@ -37,6 +38,7 @@ async def on_raw_reaction_add(payload):
         else:
             role = discord.utils.get(guild.roles, name="")
         if role is not None:
+            print(playload.emoji.name)
             member = payload.member
             if member is not None:
                 await member.add_roles(role)
