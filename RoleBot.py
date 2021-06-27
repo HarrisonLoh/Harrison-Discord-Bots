@@ -13,11 +13,14 @@ async def on_ready():
 async def on_raw_reaction_add(payload):
     message_id = payload.message_id
     if message_id == 836987061901721640:
+
+        #Test use. grab emoji
+        #print(payload.emoji.name)
+
         guild_id = payload.guild_id
         guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
         if payload.emoji.name == "0️⃣":
             role = discord.utils.get(guild.roles, name="destiny")
-        #print(payload.emoji.name)
         elif payload.emoji.name == "1️⃣":
             role = discord.utils.get(guild.roles, name="among us")
         elif payload.emoji.name == "2️⃣":
@@ -36,7 +39,7 @@ async def on_raw_reaction_add(payload):
             role = discord.utils.get(guild.roles, name="tft")
         elif payload.emoji.name == "9️⃣":
             role = discord.utils.get(guild.roles, name="valorant")
-        elif payload.emoji.name == ":Booba:":
+        elif payload.emoji.name == "Booba":
             role = discord.utils.get(guild.roles, name="nsfw")
         else:
             role = discord.utils.get(guild.roles, name="")
@@ -56,7 +59,7 @@ async def on_raw_reaction_remove(payload):
         member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
 
         #Test use. grab emoji
-        print(payload.emoji.name)
+        #print(payload.emoji.name)
 
         if payload.emoji.name == "0️⃣":
             role = discord.utils.get(guild.roles, name="destiny")
@@ -78,7 +81,7 @@ async def on_raw_reaction_remove(payload):
             role = discord.utils.get(guild.roles, name="tft")
         elif payload.emoji.name == "9️⃣":
             role = discord.utils.get(guild.roles, name="valorant")
-        elif payload.emoji.name == ":Booba:":
+        elif payload.emoji.name == "Booba":
             role = discord.utils.get(guild.roles, name="nsfw")
         else:
             role = discord.utils.get(guild.roles, name="")
