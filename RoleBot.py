@@ -55,6 +55,9 @@ async def on_raw_reaction_remove(payload):
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
         member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
 
+        #Test use. grab emoji
+        print(payload.emoji.name)
+
         if payload.emoji.name == "0️⃣":
             role = discord.utils.get(guild.roles, name="destiny")
         elif payload.emoji.name == "1️⃣":
